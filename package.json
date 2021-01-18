@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://varvarashcherbyna7.github.io/html_scss_bem_gulp/",
   "dependencies": {
     "bower": "^1.8.8",
     "gulp-clean": "^0.4.0",
