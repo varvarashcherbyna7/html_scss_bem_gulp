@@ -5,7 +5,8 @@ const gulp = require('gulp'),
       babel = require('gulp-babel'),
       sourcemaps = require('gulp-sourcemaps'),
       browserSync = require('browser-sync').create(),
-      clean = require('gulp-clean');
+      clean = require('gulp-clean'),
+      ghPages = require('gulp-gh-pages');
 
 const path = {
     build: {
@@ -99,3 +100,8 @@ gulp.task('build', gulp.series(
     imgBuild,
     watcher
 ));
+
+gulp.task('deploy', function() {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
